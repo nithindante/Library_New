@@ -21,6 +21,7 @@ function addBookToLibrary(book)
 let booksDiv = document.createElement('div');
 booksDiv.classList.add('booksMain')
 
+
 let header = document.querySelector('.header')
 let button = document.querySelector("button");
 
@@ -31,6 +32,46 @@ let readLabel = document.createElement("label");
 
 booksGrid.classList.add("booksGrid")
 document.body.appendChild(booksGrid);
+
+addBookToLibrary(book1) 
+for (let i = 0; i < myLibrary.length; i++) 
+{
+    let eachBook = document.createElement('div')
+    eachBook.classList.add('book')
+    document.body.appendChild(booksDiv);
+    let titleDiv = document.createElement('div');
+    titleDiv.innerHTML=book1.title ;
+    let authorDiv = document.createElement('div');
+    authorDiv.innerHTML=book1.author
+    let pagesDiv = document.createElement('div');
+    pagesDiv.innerHTML=book1.pages
+    eachBook.classList.add('book')
+    let readDiv = document.createElement('div');
+    readDiv.innerHTML= book1.read;
+    readDiv.classList.add('readDiv')
+    eachBook.appendChild(titleDiv);
+    eachBook.appendChild(authorDiv);
+    eachBook.appendChild(pagesDiv);
+    eachBook.appendChild(readDiv);
+    let deleteButton = document.createElement('button')
+    deleteButton.classList.add('deleteButton')
+    eachBook.appendChild(deleteButton);
+    booksDiv.appendChild(eachBook);
+    deleteButton.addEventListener('click', function () {
+    eachBook.remove()
+})
+}
+
+
+
+
+
+
+
+
+
+
+
 mainButton.addEventListener("click",function()
 {
     let readStatus = "Not Read"
@@ -123,6 +164,7 @@ mainButton.addEventListener("click",function()
     event.preventDefault();
 })
 })
+
 
 
 
