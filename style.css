@@ -1,0 +1,187 @@
+.books{
+    height: auto;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;  
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+body{
+    background: url(wall.jpg);
+    background-size: cover;
+    height: fit-content;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    color: rgb(248, 246, 250);
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+/* button{
+    
+} */
+
+dialog{
+    display: block;
+    background: url(wall.jpg);
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
+.booksGrid{
+display: flex;
+justify-content: center;
+}
+
+.forms{
+    position: relative;
+    gap: 1rem;
+display: flex;
+flex-direction: column;
+border: 1px solid whitesmoke;
+border-radius: 1rem;
+padding: 1rem;
+width: max-content;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.innerForm{
+    display: flex;
+    gap: 1rem;
+}
+
+.innerForm>input{
+    flex-grow: 1;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.innerForm>label{
+    width: 20%;
+    /* margin-left: 1rem; */
+}
+
+
+/* CSS */
+.mainButton {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.mainButton:hover,
+.mainButton:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.mainButton:active {
+background: #09223b;
+color: rgb(255, 255, 255, .7);
+}
+
+.mainButton:disabled { 
+cursor: not-allowed;
+background: rgba(0, 0, 0, .08);
+color: rgba(0, 0, 0, .3);
+}
+
+
+.booksGrid:empty{
+opacity: 0;
+scale: 0;
+}
+
+.booksGrid{
+    transition: opacity 1s,scale 1s;
+    opacity: 1;
+    scale: 1;
+}
+
+
+.inner-header{
+    opacity: 0;
+}
+
+.submitButton{
+background-color: white;
+color: black;
+width: 50%;
+}
+.read{
+    position: absolute;
+    transform: translate(310%,530%);
+}
+
+.booksMain{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
+
+.book{
+border: 1px solid whitesmoke;
+padding: 1rem;
+border-radius: 1rem;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+overflow: auto;
+position: relative;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.deleteButton{
+    background: url(delete.svg);
+    padding: 1rem;
+    border: 0;
+    position:absolute;
+    transform: translate(400%,-90%);
+}
+
+.submitButton{
+    border-radius: 1rem;
+    transition: transform 1ms;
+}
+
+.submitButton:active{
+    transform: translateY(10%)
+}
