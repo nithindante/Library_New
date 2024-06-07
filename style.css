@@ -133,6 +133,7 @@ scale: 0;
 
 .inner-header{
     opacity: 0;
+    display: none;
 }
 
 .submitButton{
