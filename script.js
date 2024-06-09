@@ -157,8 +157,6 @@ mainButton.addEventListener("click",function()
     let readStatus = readLabel.innerHTML
 
 
-
-
     let pagesForm = document.createElement('div');
     pagesForm.classList.add("innerForm")
     pagesForm.appendChild(pagesLabel);
