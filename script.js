@@ -1,28 +1,47 @@
-function Books(title,author,pages,read)
+class Books
 {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function()
+    constructor(title,author,pages,read)
     {
-        return this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function()
+        {
+            return this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read;
+        }
+    }
+
+    changeStatus(){
+        if (this.read == "Read")
+            {
+                this.read = "Not Read"
+                return this.read
+            }   
+        else{
+            this.read = "Read"
+            this.read
+        }
     }
 }
-Books.prototype.changeStatus = function() 
-{
-if (this.read == "Read")
-    {
-        this.read = "Not Read"
-        return this.read
-    }   
-else{
-    this.read = "Read"
-    this.read
-}
-}
- let book1 = new Books("The Hobbit","J.R.R. Tolkien",295,'Read');
 
+
+
+
+// function Books(title,author,pages,read)
+// {
+    
+    
+// }
+
+
+// Books.prototype.changeStatus = function() 
+// {
+
+// }
+
+
+let book1 = new Books("The Hobbit","J.R.R. Tolkien",295,'Read');
 let myLibrary = [];
 
 function addBookToLibrary(book) 
